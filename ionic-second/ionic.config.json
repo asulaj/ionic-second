@@ -1,0 +1,7 @@
+{
+  "name": "ionic-second",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
