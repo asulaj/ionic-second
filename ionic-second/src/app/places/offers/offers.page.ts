@@ -9,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OffersPage implements OnInit {
   offers: Place[];
-  constructor(private placesService: PlacesService ) { }
+  constructor(private placesService: PlacesService) {}
 
   ngOnInit() {
-    this.offers = this.placesService.places
+    this.offers = this.placesService.places;
   }
-
+  onEdit(offerId: string) {
+    console.log(offerId);
+  }
 }
