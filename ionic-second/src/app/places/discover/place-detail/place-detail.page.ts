@@ -52,11 +52,11 @@ export class PlaceDetailPage implements OnInit {
     text: 'Cancel',
     role: 'destructive'
    }]}).then(actionSheetEl => actionSheetEl.present());
-    
+
   }
   openBookingModal(mode: 'select' | 'random'){
     console.log(mode)
-    this.modalCtrl.create({component: CreateBookingComponent, componentProps:{selectedPlace: this.place}}).then(modalEl=>{
+    this.modalCtrl.create({component: CreateBookingComponent, componentProps:{selectedPlace: this.place, selectedMode: mode}}).then(modalEl=>{
       modalEl.present();
       return modalEl.onDidDismiss()
     }).then(resultData =>{
